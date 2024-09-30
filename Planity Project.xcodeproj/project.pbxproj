@@ -14,6 +14,7 @@
 		687974BC2CA94C8F00BADA99 /* Planity_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974BB2CA94C8F00BADA99 /* Planity_ProjectTests.swift */; };
 		687974C62CA94C8F00BADA99 /* Planity_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974C52CA94C8F00BADA99 /* Planity_ProjectUITests.swift */; };
 		687974C82CA94C8F00BADA99 /* Planity_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974C72CA94C8F00BADA99 /* Planity_ProjectUITestsLaunchTests.swift */; };
+		687974D52CAA7B5400BADA99 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974D42CAA7B5400BADA99 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		687974C12CA94C8F00BADA99 /* Planity ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Planity ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		687974C52CA94C8F00BADA99 /* Planity_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planity_ProjectUITests.swift; sourceTree = "<group>"; };
 		687974C72CA94C8F00BADA99 /* Planity_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planity_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		687974D42CAA7B5400BADA99 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				687974AA2CA94C8E00BADA99 /* Planity_ProjectApp.swift */,
 				687974AC2CA94C8E00BADA99 /* ContentView.swift */,
+				687974D42CAA7B5400BADA99 /* UserData.swift */,
 				687974AE2CA94C8F00BADA99 /* Assets.xcassets */,
 				687974B02CA94C8F00BADA99 /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				687974D52CAA7B5400BADA99 /* UserData.swift in Sources */,
 				687974AD2CA94C8E00BADA99 /* ContentView.swift in Sources */,
 				687974AB2CA94C8E00BADA99 /* Planity_ProjectApp.swift in Sources */,
 			);
