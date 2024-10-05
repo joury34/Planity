@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("isRegistered") var isRegistered: Bool = false
+    @AppStorage("userName") var userName: String = ""
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if !isRegistered {
+            Onboarding1() // Show onboarding if the user is not registered
+        } else {
+            if userName.isEmpty {
+                UserData() // Show UserData view if no name is set
+            } else {
+                TaskHeadingView() // Show TaskHeading view if the user has completed the registration
+            }
         }
-        .padding()
     }
 }
-
 #Preview {
     ContentView()
 }
