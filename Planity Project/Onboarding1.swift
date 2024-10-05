@@ -36,7 +36,8 @@ struct Onboarding1: View {
                                         HStack {
                                             Spacer()
                                             Button(action: {
-                                                isRegistered = true // Skip to register
+                                                isRegistered = true // Mark as registered
+                                                currentPage = 2 // Move to the third page
                                             }) {
                                                 Text("Skip")
                                                     .font(.headline)
@@ -86,3 +87,4 @@ struct Onboarding1: View {
 #Preview {
     Onboarding1()
 }
+
