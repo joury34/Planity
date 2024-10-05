@@ -5,6 +5,7 @@
 //  Created by Aliah Alhameed on 02/04/1446 AH.
 //
 
+
 import SwiftUI
 
 
@@ -81,7 +82,24 @@ struct CalnderTask: View {
 
     var body: some View {
         NavigationView {
+
+        
+    
+
             VStack {
+                ZStack {
+                    Spacer()
+                
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: HintView()) {
+                            Image("light-bulb")
+                                .resizable()
+                                .frame(width: 80.0, height: 80.0)
+                        }
+                        }
+                    }
+                }
                                 // User Greeting Section
                                 VStack(spacing: 20) {
                                     Text("Hello, \(userName)")
@@ -515,4 +533,3 @@ struct CalnderTask_Previews: PreviewProvider {
         CalnderTask()
     }
 }
-

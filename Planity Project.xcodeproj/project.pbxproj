@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E9986D52CB1C5410025D73D /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9986D42CB1C5410025D73D /* HintView.swift */; };
 		6807C8472CB166D300D2FF33 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C8462CB166D300D2FF33 /* Onboarding1.swift */; };
 		6807C8492CB1670100D2FF33 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C8482CB1670100D2FF33 /* Onboarding2.swift */; };
 		6807C84B2CB1672800D2FF33 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84A2CB1672800D2FF33 /* Onboarding3.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E9986D42CB1C5410025D73D /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		6807C8462CB166D300D2FF33 /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		6807C8482CB1670100D2FF33 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		6807C84A2CB1672800D2FF33 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				6807C8482CB1670100D2FF33 /* Onboarding2.swift */,
 				6807C84A2CB1672800D2FF33 /* Onboarding3.swift */,
 				6807C84C2CB1676200D2FF33 /* UserData.swift */,
+				1E9986D42CB1C5410025D73D /* HintView.swift */,
 				6807C84E2CB1678300D2FF33 /* CalnderTask.swift */,
 				687974AE2CA94C8F00BADA99 /* Assets.xcassets */,
 				687974B02CA94C8F00BADA99 /* Preview Content */,
@@ -279,6 +282,7 @@
 				687974AD2CA94C8E00BADA99 /* ContentView.swift in Sources */,
 				6807C84F2CB1678300D2FF33 /* CalnderTask.swift in Sources */,
 				687974AB2CA94C8E00BADA99 /* Planity_ProjectApp.swift in Sources */,
+				1E9986D52CB1C5410025D73D /* HintView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
