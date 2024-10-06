@@ -12,7 +12,7 @@
 		6807C8492CB1670100D2FF33 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C8482CB1670100D2FF33 /* Onboarding2.swift */; };
 		6807C84B2CB1672800D2FF33 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84A2CB1672800D2FF33 /* Onboarding3.swift */; };
 		6807C84D2CB1676200D2FF33 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84C2CB1676200D2FF33 /* UserData.swift */; };
-		6807C84F2CB1678300D2FF33 /* CalnderTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84E2CB1678300D2FF33 /* CalnderTask.swift */; };
+		6807C84F2CB1678300D2FF33 /* CalendarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84E2CB1678300D2FF33 /* CalendarTask.swift */; };
 		687974AB2CA94C8E00BADA99 /* Planity_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974AA2CA94C8E00BADA99 /* Planity_ProjectApp.swift */; };
 		687974AD2CA94C8E00BADA99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974AC2CA94C8E00BADA99 /* ContentView.swift */; };
 		687974AF2CA94C8F00BADA99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687974AE2CA94C8F00BADA99 /* Assets.xcassets */; };
@@ -45,7 +45,7 @@
 		6807C8482CB1670100D2FF33 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		6807C84A2CB1672800D2FF33 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		6807C84C2CB1676200D2FF33 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		6807C84E2CB1678300D2FF33 /* CalnderTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalnderTask.swift; sourceTree = "<group>"; };
+		6807C84E2CB1678300D2FF33 /* CalendarTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTask.swift; sourceTree = "<group>"; };
 		687974A72CA94C8E00BADA99 /* Planity Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Planity Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		687974AA2CA94C8E00BADA99 /* Planity_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planity_ProjectApp.swift; sourceTree = "<group>"; };
 		687974AC2CA94C8E00BADA99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				6807C84A2CB1672800D2FF33 /* Onboarding3.swift */,
 				6807C84C2CB1676200D2FF33 /* UserData.swift */,
 				1E9986D42CB1C5410025D73D /* HintView.swift */,
-				6807C84E2CB1678300D2FF33 /* CalnderTask.swift */,
+				6807C84E2CB1678300D2FF33 /* CalendarTask.swift */,
 				687974AE2CA94C8F00BADA99 /* Assets.xcassets */,
 				687974B02CA94C8F00BADA99 /* Preview Content */,
 			);
@@ -280,7 +280,7 @@
 				6807C8492CB1670100D2FF33 /* Onboarding2.swift in Sources */,
 				6807C84B2CB1672800D2FF33 /* Onboarding3.swift in Sources */,
 				687974AD2CA94C8E00BADA99 /* ContentView.swift in Sources */,
-				6807C84F2CB1678300D2FF33 /* CalnderTask.swift in Sources */,
+				6807C84F2CB1678300D2FF33 /* CalendarTask.swift in Sources */,
 				687974AB2CA94C8E00BADA99 /* Planity_ProjectApp.swift in Sources */,
 				1E9986D52CB1C5410025D73D /* HintView.swift in Sources */,
 			);

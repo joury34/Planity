@@ -51,7 +51,7 @@ struct Task: Identifiable, Hashable {
     }
 }
 
-struct CalnderTask: View {
+struct CalendarTask: View {
     @AppStorage("userName") var userName: String = ""
         @AppStorage("userField") var userField: String = ""
     @State private var contentPlan: [String: [Task]] = [:] // Stores the plan with dates as keys
@@ -175,38 +175,38 @@ struct CalnderTask: View {
                 }
                 .padding()
                 
-                // Add Task Button
                 Button(action: {
-                    showSheetType = .addTask
-                }) {
-                    Image(systemName: "plus")
-                        .font(.system(size: 24))
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                }
-                .padding()
-                
-                Spacer()
-            }
-            .onAppear {
-                generateContentPlan()
-                loadTasksForDate() // Load tasks for today when the view appears
-            }
-            .sheet(item: $showSheetType) { sheetType in
-                switch sheetType {
-                case .taskSheet:
-                    TaskSheetView(date: selectedDate, tasks: $tasksForSelectedDate, deleteTask: deleteTask)
-                case .addTask:
-                    AddTaskView(selectedDate: selectedDate) { newTask in // Pass selectedDate here
-                        addTask(newTask, for: selectedDate)
-                    }
-                }
-            }
-        }
-        
-    }
+                                   showSheetType = .addTask
+                               }) {
+                                   Image(systemName: "plus")
+                                       .font(.system(size: 24))
+                                       .padding()
+                                       .background(Color.blue)
+                                       .foregroundColor(.white)
+                                       .clipShape(Circle())
+                               }
+                               .padding()
+
+                               Spacer()
+                           }
+                           .onAppear {
+                               generateContentPlan()
+                               loadTasksForDate() // Load tasks for today when the view appears
+                           }
+                           .sheet(item: $showSheetType) { sheetType in
+                               switch sheetType {
+                               case .taskSheet:
+                                   TaskSheetView(date: selectedDate, tasks: $tasksForSelectedDate, deleteTask: deleteTask)
+                               case .addTask:
+                                   AddTaskView { newTask, taskDate in
+                                       addTask(newTask, for: taskDate) // Pass taskDate here, not selectedDate from calendar
+                                   }
+                               }
+                           }
+                       }
+                   }
+
+
     // Function to generate the list of days for the given month
     func getDaysForMonth(_ month: Int, _ year: Int) -> [Date] {
         var dates = [Date]()
@@ -309,9 +309,10 @@ struct CalnderTask: View {
         tasksForSelectedDate = contentPlan[dateKey] ?? []
     }
 
+
     // Add new task to the selected date
     func addTask(_ task: Task, for date: Date) {
-        let dateKey = dateFormatter().string(from: date)
+        let dateKey = dateFormatter().string(from: date) // Use the date passed from AddTaskView
         var updatedTask = task
         updatedTask.isUserAdded = true // Mark task as user-added
         if contentPlan[dateKey] != nil {
@@ -455,40 +456,37 @@ struct TaskSheetView: View {
     }
 }
 
-// Updated AddTaskView to include Date and Time
+
+
+// Updated AddTaskView
 struct AddTaskView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var selectedDate: Date = Date()
     @State private var selectedTime: Date = Date()
     @State private var title: String = ""
     @State private var description: String = ""
     @State private var selectedPlatform: Task.Platform = .tiktok
 
-    var selectedDate: Date // Add selected date parameter
-    var onSave: (Task) -> Void
+    var onSave: (Task, Date) -> Void
 
     let allPlatforms: [Task.Platform] = [.tiktok, .instagram]
-
-    // Get the selected date as a formatted string
-    private var currentDate: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        return dateFormatter.string(from: selectedDate) // Use the passed selected date
-    }
 
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Date")) {
-                    // Display the selected date
-                    Text(currentDate)
-                        .font(.body)
-                        .foregroundColor(.gray)
+                // Allow the user to select the date for the task in a compact style
+                Section(header: Text("Select Date")) {
+                    DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
+                        .datePickerStyle(CompactDatePickerStyle()) // Use CompactDatePickerStyle to make it look like the time picker
                 }
 
+                // Allow the user to select the time for the task
                 Section(header: Text("Select Time")) {
                     DatePicker("Select Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(CompactDatePickerStyle()) // Ensure consistency in style
                 }
 
+                // User can select the platform for the task
                 Section(header: Text("Platform")) {
                     Picker("Select Platform", selection: $selectedPlatform) {
                         ForEach(allPlatforms, id: \.self) { platform in
@@ -498,10 +496,12 @@ struct AddTaskView: View {
                     .pickerStyle(SegmentedPickerStyle())
                 }
 
+                // User can input the title of the task
                 Section(header: Text("Title")) {
                     TextField("New Title", text: $title)
                 }
 
+                // User can input the description of the task
                 Section(header: Text("Description")) {
                     TextField("Task Description", text: $description)
                 }
@@ -521,15 +521,14 @@ struct AddTaskView: View {
                     heading: TaskHeading(title: title, details: []),
                     isUserAdded: true
                 )
-                onSave(newTask)
+                onSave(newTask, selectedDate) // Use selectedDate for saving the task
                 presentationMode.wrappedValue.dismiss()
             })
         }
     }
 }
-
-struct CalnderTask_Previews: PreviewProvider {
+struct CalendarTask_Previews: PreviewProvider {
     static var previews: some View {
-        CalnderTask()
+        CalendarTask()
     }
 }

@@ -122,7 +122,7 @@ struct UserData: View {
                     Alert(title: Text("Input Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }
                 .fullScreenCover(isPresented: $showTaskHeadingView) {
-                    CalnderTask()
+                    CalendarTask()
                 }
                 .padding(.top, 30)
             }

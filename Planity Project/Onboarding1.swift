@@ -10,6 +10,7 @@ import SwiftUI
 struct Onboarding1: View {
     @AppStorage("isRegistered") var isRegistered: Bool = false
     @State private var currentPage = 0
+    @State private var showUserDataView = false // State variable to control navigation to UserData
     private let totalPages = 3 // Total number of pages
 
     var body: some View {
@@ -37,7 +38,7 @@ struct Onboarding1: View {
                                             Spacer()
                                             Button(action: {
                                                 isRegistered = true // Mark as registered
-                                                currentPage = 2 // Move to the third page
+                                                showUserDataView = true // Show UserData view
                                             }) {
                                                 Text("Skip")
                                                     .font(.headline)
@@ -80,6 +81,9 @@ struct Onboarding1: View {
             }
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.all) // Ensure to ignore safe areas
+            .fullScreenCover(isPresented: $showUserDataView) {
+                UserData()
+            }
         }
     }
 }
@@ -87,4 +91,3 @@ struct Onboarding1: View {
 #Preview {
     Onboarding1()
 }
-

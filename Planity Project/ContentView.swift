@@ -18,7 +18,7 @@ struct ContentView: View {
             if userName.isEmpty {
                 UserData() // Show UserData view if no name is set
             } else {
-                CalnderTask() // Show TaskHeading view if the user has completed the registration
+                CalendarTask() // Show TaskHeading view if the user has completed the registration
             }
         }
     }
