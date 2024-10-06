@@ -96,6 +96,8 @@ struct CalendarTask: View {
                             Image("light-bulb")
                                 .resizable()
                                 .frame(width: 80.0, height: 80.0)
+                                .position(x: 60, y: 48)
+                                .shadow(color: Color.orange.opacity(0.9), radius: 22, x: 0, y: 5)
                         }
                         }
                     }
@@ -103,12 +105,17 @@ struct CalendarTask: View {
                                 // User Greeting Section
                                 VStack(spacing: 20) {
                                     Text("Hello, \(userName)")
-                                        .font(.title)
+                                        .font(.largeTitle)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color("purpple"))
                                         .bold()
+                                        .position(x: 105)
                                     
 
                                     Text("The best plan for \(userField) field.")
                                         .font(.headline)
+                                        .foregroundColor(Color("Colorpage"))
+                                        .position(x: 130)
                                       
                                 }
                 // Month View Header
@@ -123,7 +130,7 @@ struct CalendarTask: View {
                         selectedDate = Date.distantPast // Deselect the current date
                     }) {
                         Image(systemName: "chevron.left")
-                            .foregroundColor(.blue)
+                            .foregroundColor(.colorpage)
                     }
                     Spacer()
                     Text("\(monthString(currentMonth)) \(String(currentYear))") // Modified to ensure the year displays without commas
@@ -140,7 +147,7 @@ struct CalendarTask: View {
                         selectedDate = Date.distantPast // Deselect the current date
                     }) {
                         Image(systemName: "chevron.right")
-                            .foregroundColor(.blue)
+                            .foregroundColor(.colorpage)
                     }
                 }
                 .padding(.horizontal, 40)
@@ -152,6 +159,7 @@ struct CalendarTask: View {
                         Text(day)
                             .font(.subheadline)
                             .frame(maxWidth: .infinity)
+                            .foregroundColor(.colorpage)
                     }
                 }
                 .padding(.horizontal)
@@ -181,9 +189,11 @@ struct CalendarTask: View {
                                    Image(systemName: "plus")
                                        .font(.system(size: 24))
                                        .padding()
-                                       .background(Color.blue)
+                                       .background(Color.purpple)
                                        .foregroundColor(.white)
                                        .clipShape(Circle())
+                                       .shadow(color: Color.purple.opacity(0.2), radius: 22, x: 0, y: 12)
+                                   
                                }
                                .padding()
 
@@ -368,10 +378,14 @@ struct CalendarDayView: View {
                         }
                     }
                 }
+                
                 .frame(width: 44, height: 75)
-                .background(isToday ? Color.blue : (isSelected ? Color.purple : Color(UIColor.systemGray6)))
+                .background(isToday ? Color.purple3 : (isSelected ? Color.purpple : Color(UIColor.systemGray6)))
+                
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-                .foregroundColor(isToday || isSelected ? .white : .black)
+                .foregroundColor(isToday || isSelected ? .colorpage : .colorpage)
+                
+                
             } else {
                 Text("")
                     .frame(width: 55, height: 75)
@@ -410,30 +424,35 @@ struct TaskSheetView: View {
 
                         VStack(alignment: .leading) {
                             Text(task.heading.title)
-                                .font(.headline)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("Colorpage"))
 
                             if let content = task.content {
                                 Text(content)
                                     .font(.subheadline)
-                                    .foregroundColor(.black)
-                                    .padding(.top, 2)
+                                    .foregroundColor(.colorpage)
+                                    .padding(.top, 10)
                             }
 
                             ForEach(task.heading.details, id: \.self) { detail in
                                 Text(detail)
-                                    .font(.footnote)
+                                    .font(.callout)
                                     .foregroundColor(.gray)
+                                    .padding(.top, 0)
                             }
 
                             Text("Scheduled at \(task.time)")
                                 .font(.subheadline)
-                                .foregroundColor(.gray)
+                                .fontWeight(.bold)
+                                .foregroundColor(.darkpurple)
                                 .padding(.top, 4)
                         }
                     }
                     .padding()
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(10)
+                   
                 }
                 .onDelete { indexSet in
                     indexSet.forEach { index in
