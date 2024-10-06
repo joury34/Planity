@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct Onboarding3: View {
     @AppStorage("isRegistered") var isRegistered: Bool = false
     @State private var sparkleOpacity: Double = 0.0
@@ -24,7 +23,7 @@ struct Onboarding3: View {
             ForEach(0..<30) { _ in
                 Circle()
                     .fill(Color.white)
-                    .frame(width: 8, height: 8)
+                    .frame(width: 4, height: 4) // Smaller size
                     .opacity(sparkleOpacity)
                     .position(randomPosition())
                     .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: sparkleOpacity)
@@ -60,4 +59,3 @@ struct Onboarding3: View {
 #Preview {
     Onboarding3()
 }
-
