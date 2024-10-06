@@ -4,9 +4,7 @@
 //
 //  Created by Aliah Alhameed on 02/04/1446 AH.
 //
-
 import SwiftUI
-
 
 struct Onboarding2: View {
     @State private var sparkleOpacity: Double = 0.0
@@ -22,10 +20,10 @@ struct Onboarding2: View {
                 .edgesIgnoringSafeArea(.all)
 
             // Sparkling effect
-            ForEach(0..<20) { _ in
+            ForEach(0..<30) { _ in // Increased number of sparkles for better effect
                 Circle()
-                    .fill(Color.blue.opacity(0.5))
-                    .frame(width: 10, height: 10)
+                    .fill(Color.blue.opacity(0.6)) // Baby blue color
+                    .frame(width: 6, height: 6) // Smaller size
                     .opacity(sparkleOpacity)
                     .position(randomPosition())
                     .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: sparkleOpacity)

@@ -4,7 +4,6 @@
 //
 //  Created by Aliah Alhameed on 02/04/1446 AH.
 //
-
 import SwiftUI
 
 struct Onboarding1: View {
@@ -23,6 +22,10 @@ struct Onboarding1: View {
                         .scaledToFill()
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .clipped()
+                        .edgesIgnoringSafeArea(.all)
+
+                    // Shine Effect Overlay
+                    ShineEffect()
                         .edgesIgnoringSafeArea(.all)
 
                     VStack {
@@ -85,6 +88,22 @@ struct Onboarding1: View {
                 UserData()
             }
         }
+    }
+}
+
+struct ShineEffect: View {
+    @State private var shinePosition: CGFloat = -200 // Start off-screen
+
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.7), Color.clear]), startPoint: .leading, endPoint: .trailing)
+            .frame(width: 300, height: 100) // Width and height for a more polished look
+            .cornerRadius(50) // Rounded edges for a softer appearance
+            .rotationEffect(.degrees(30))
+            .offset(x: shinePosition, y: 0)
+            .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false), value: shinePosition)
+            .onAppear {
+                shinePosition = UIScreen.main.bounds.width + 200 // Move shine across the screen
+            }
     }
 }
 
