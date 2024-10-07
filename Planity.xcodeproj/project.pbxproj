@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 687974A22CA94C8E00BADA99 /* Build configuration list for PBXProject "Planity Project" */;
+			buildConfigurationList = 687974A22CA94C8E00BADA99 /* Build configuration list for PBXProject "Planity" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -575,7 +575,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		687974A22CA94C8E00BADA99 /* Build configuration list for PBXProject "Planity Project" */ = {
+		687974A22CA94C8E00BADA99 /* Build configuration list for PBXProject "Planity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				687974C92CA94C8F00BADA99 /* Debug */,
