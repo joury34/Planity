@@ -33,6 +33,7 @@ struct UserData: View {
                 
                 Text("Please enter your information")
                     .font(.title)
+                    .multilineTextAlignment(.center)
                     .bold()
                     .padding(.top, 10)
 
