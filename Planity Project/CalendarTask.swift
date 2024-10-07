@@ -83,9 +83,6 @@ struct CalendarTask: View {
     var body: some View {
         NavigationView {
 
-        
-    
-
             VStack {
                 ZStack {
                     Spacer()
@@ -95,9 +92,9 @@ struct CalendarTask: View {
                         NavigationLink(destination: HintView()) {
                             Image("light-bulb")
                                 .resizable()
-                                .frame(width: 80.0, height: 80.0)
-                                .position(x: 60, y: 48)
-                                .shadow(color: Color.orange.opacity(0.9), radius: 22, x: 0, y: 5)
+                                .frame(width: 70.0, height: 70.0)
+                                .position(x: 60, y: 17)
+                                .shadow(color: Color.orange.opacity(0.2), radius: 16, x: 0, y: 5)
                         }
                         }
                     }
@@ -109,13 +106,14 @@ struct CalendarTask: View {
                                         .fontWeight(.heavy)
                                         .foregroundColor(Color("purpple"))
                                         .bold()
-                                        .position(x: 105)
+                                
+                                        .position(x: 105, y: -28)
                                     
 
                                     Text("The best plan for \(userField) field.")
                                         .font(.headline)
                                         .foregroundColor(Color("Colorpage"))
-                                        .position(x: 130)
+                                        .position(x: 130, y:-30)
                                       
                                 }
                 // Month View Header
