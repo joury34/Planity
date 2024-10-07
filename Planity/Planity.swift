@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Planity_ProjectApp: App {
+struct Planity: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

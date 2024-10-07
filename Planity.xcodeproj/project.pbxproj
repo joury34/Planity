@@ -13,7 +13,7 @@
 		6807C84B2CB1672800D2FF33 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84A2CB1672800D2FF33 /* Onboarding3.swift */; };
 		6807C84D2CB1676200D2FF33 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84C2CB1676200D2FF33 /* UserData.swift */; };
 		6807C84F2CB1678300D2FF33 /* CalendarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C84E2CB1678300D2FF33 /* CalendarTask.swift */; };
-		687974AB2CA94C8E00BADA99 /* Planity_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974AA2CA94C8E00BADA99 /* Planity_ProjectApp.swift */; };
+		687974AB2CA94C8E00BADA99 /* Planity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974AA2CA94C8E00BADA99 /* Planity.swift */; };
 		687974AD2CA94C8E00BADA99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687974AC2CA94C8E00BADA99 /* ContentView.swift */; };
 		687974AF2CA94C8F00BADA99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687974AE2CA94C8F00BADA99 /* Assets.xcassets */; };
 		687974B22CA94C8F00BADA99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687974B12CA94C8F00BADA99 /* Preview Assets.xcassets */; };
@@ -46,8 +46,8 @@
 		6807C84A2CB1672800D2FF33 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		6807C84C2CB1676200D2FF33 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		6807C84E2CB1678300D2FF33 /* CalendarTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTask.swift; sourceTree = "<group>"; };
-		687974A72CA94C8E00BADA99 /* Planity Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Planity Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		687974AA2CA94C8E00BADA99 /* Planity_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planity_ProjectApp.swift; sourceTree = "<group>"; };
+		687974A72CA94C8E00BADA99 /* Planity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		687974AA2CA94C8E00BADA99 /* Planity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planity.swift; sourceTree = "<group>"; };
 		687974AC2CA94C8E00BADA99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		687974AE2CA94C8F00BADA99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687974B12CA94C8F00BADA99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		6879749E2CA94C8E00BADA99 = {
 			isa = PBXGroup;
 			children = (
-				687974A92CA94C8E00BADA99 /* Planity Project */,
+				687974A92CA94C8E00BADA99 /* Planity */,
 				687974BA2CA94C8F00BADA99 /* Planity ProjectTests */,
 				687974C42CA94C8F00BADA99 /* Planity ProjectUITests */,
 				687974A82CA94C8E00BADA99 /* Products */,
@@ -96,17 +96,17 @@
 		687974A82CA94C8E00BADA99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				687974A72CA94C8E00BADA99 /* Planity Project.app */,
+				687974A72CA94C8E00BADA99 /* Planity.app */,
 				687974B72CA94C8F00BADA99 /* Planity ProjectTests.xctest */,
 				687974C12CA94C8F00BADA99 /* Planity ProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		687974A92CA94C8E00BADA99 /* Planity Project */ = {
+		687974A92CA94C8E00BADA99 /* Planity */ = {
 			isa = PBXGroup;
 			children = (
-				687974AA2CA94C8E00BADA99 /* Planity_ProjectApp.swift */,
+				687974AA2CA94C8E00BADA99 /* Planity.swift */,
 				687974AC2CA94C8E00BADA99 /* ContentView.swift */,
 				6807C8462CB166D300D2FF33 /* Onboarding1.swift */,
 				6807C8482CB1670100D2FF33 /* Onboarding2.swift */,
@@ -117,7 +117,7 @@
 				687974AE2CA94C8F00BADA99 /* Assets.xcassets */,
 				687974B02CA94C8F00BADA99 /* Preview Content */,
 			);
-			path = "Planity Project";
+			path = Planity;
 			sourceTree = "<group>";
 		};
 		687974B02CA94C8F00BADA99 /* Preview Content */ = {
@@ -148,9 +148,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		687974A62CA94C8E00BADA99 /* Planity Project */ = {
+		687974A62CA94C8E00BADA99 /* Planity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 687974CB2CA94C8F00BADA99 /* Build configuration list for PBXNativeTarget "Planity Project" */;
+			buildConfigurationList = 687974CB2CA94C8F00BADA99 /* Build configuration list for PBXNativeTarget "Planity" */;
 			buildPhases = (
 				687974A32CA94C8E00BADA99 /* Sources */,
 				687974A42CA94C8E00BADA99 /* Frameworks */,
@@ -160,9 +160,9 @@
 			);
 			dependencies = (
 			);
-			name = "Planity Project";
+			name = Planity;
 			productName = "Planity Project";
-			productReference = 687974A72CA94C8E00BADA99 /* Planity Project.app */;
+			productReference = 687974A72CA94C8E00BADA99 /* Planity.app */;
 			productType = "com.apple.product-type.application";
 		};
 		687974B62CA94C8F00BADA99 /* Planity ProjectTests */ = {
@@ -237,7 +237,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				687974A62CA94C8E00BADA99 /* Planity Project */,
+				687974A62CA94C8E00BADA99 /* Planity */,
 				687974B62CA94C8F00BADA99 /* Planity ProjectTests */,
 				687974C02CA94C8F00BADA99 /* Planity ProjectUITests */,
 			);
@@ -281,7 +281,7 @@
 				6807C84B2CB1672800D2FF33 /* Onboarding3.swift in Sources */,
 				687974AD2CA94C8E00BADA99 /* ContentView.swift in Sources */,
 				6807C84F2CB1678300D2FF33 /* CalendarTask.swift in Sources */,
-				687974AB2CA94C8E00BADA99 /* Planity_ProjectApp.swift in Sources */,
+				687974AB2CA94C8E00BADA99 /* Planity.swift in Sources */,
 				1E9986D52CB1C5410025D73D /* HintView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,12 +308,12 @@
 /* Begin PBXTargetDependency section */
 		687974B92CA94C8F00BADA99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 687974A62CA94C8E00BADA99 /* Planity Project */;
+			target = 687974A62CA94C8E00BADA99 /* Planity */;
 			targetProxy = 687974B82CA94C8F00BADA99 /* PBXContainerItemProxy */;
 		};
 		687974C32CA94C8F00BADA99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 687974A62CA94C8E00BADA99 /* Planity Project */;
+			target = 687974A62CA94C8E00BADA99 /* Planity */;
 			targetProxy = 687974C22CA94C8F00BADA99 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -445,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Planity Project/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Planity/Preview Content\"";
 				DEVELOPMENT_TEAM = 59S9AH5LLK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -474,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Planity Project/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Planity/Preview Content\"";
 				DEVELOPMENT_TEAM = 59S9AH5LLK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -584,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		687974CB2CA94C8F00BADA99 /* Build configuration list for PBXNativeTarget "Planity Project" */ = {
+		687974CB2CA94C8F00BADA99 /* Build configuration list for PBXNativeTarget "Planity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				687974CC2CA94C8F00BADA99 /* Debug */,
