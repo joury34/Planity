@@ -106,14 +106,13 @@ struct CalendarTask: View {
                                         .fontWeight(.heavy)
                                         .foregroundColor(Color("purpple"))
                                         .bold()
-                                
                                         .position(x: 105, y: -28)
-                                    
-
-                                    Text("The best plan for \(userField) field.")
+                                       
+                                        .padding()
+                                    Text("The best plan for \(userField) field")
                                         .font(.headline)
                                         .foregroundColor(Color("Colorpage"))
-                                        .position(x: 124, y:-30)
+                                        .position(x: 140, y:-30)
                                       
                                 }
                 // Month View Header
