@@ -1,7 +1,14 @@
 📅 Planity App
 
----
 Planity is a social media content planning app designed to help small businesses, startups, and individuals streamline their content creation process. Planity provides a daily content plan with pre-generated tasks, strategies, and tips to help users stay organized, save time, and create engaging content for their audiences on platforms like Instagram and TikTok.
+
+
+---
+<img width="1710" alt="Planity App" src="https://github.com/user-attachments/assets/fe70fa58-c2fa-4af6-b5b8-b30710f3318f">
+
+
+
+
 
 ---
 📲 Key Features
