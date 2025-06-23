@@ -88,17 +88,7 @@ Multi-Platform Support: Expand planning capabilities to support more social medi
 
 
 ---
-🤝 Contributions
 
-Planity is the result of collaborative teamwork, and we welcome further contributions to help make it even better! If you’d like to contribute:
-
-Fork this repository.
-
-Create a new branch for your feature or bug fix.
-
-Submit a pull request with a description of your changes.
-
-Feel free to open issues for any bugs or feature requests.
 
 
 ---
