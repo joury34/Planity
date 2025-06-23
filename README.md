@@ -32,27 +32,8 @@ User-Friendly UX: Built with SwiftUI, Planity provides a smooth and intuitive us
 
 SwiftUI: Provides a modern, responsive, and user-friendly interface.
 
----
-🚀 Getting Started
-
-Prerequisites
-Xcode 12 or later
-iOS 14.0 or later
-
-Installation
-
-Clone the Repository:
-https://github.com/joury34/Planity
-
-Open the Project in Xcode:
-Copy code
-
-cd Planity
-
-open Planity.xcodeproj
 
 
-Run the App on your preferred simulator or iOS device.
 
 ---
 📖 Usage
