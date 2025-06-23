@@ -72,14 +72,6 @@ Multi-Platform Support: Expand planning capabilities to support more social medi
 
 
 
----
-📞 Contacts
-
-If you have any questions or suggestions, feel free to reach out!
-
-Email: jouryalsulimani@gmail.com
-
-LinkedIn: https://www.linkedin.com/in/joury-alsulimani-242269273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
 
 
 
